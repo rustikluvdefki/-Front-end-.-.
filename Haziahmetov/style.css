@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.all{
+    margin: 20px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    width: 40%;
+    background: aliceblue;
+    border: 2px solid cornflowerblue;
+    border-radius: 20px;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+}
+
+.form{
+    display: flex;
+}
+
+.item{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    position: relative;
+}
+
+.input{
+    width: 20vw;
+    height: 3vh;
+    border-radius: 5px;
+    border: 1px solid cornflowerblue;
+}
+
+.podsanu-gesamilod {
+    position: absolute;
+    top: 33px;
+    right: 185px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(http://zornet.ru/ZORNET-RU/ZR/Alinuversa/amipsakilad/dsareqab.svg) 0 0 no-repeat;
+}
+.podsanu-gesamilod.view {
+    background: url(http://zornet.ru/ZORNET-RU/ZR/Alinuversa/amipsakilad/loxanetased.svg) 0 0 no-repeat;
+}
+
+.agree{
+    margin-top: 15px;
+}
+
+.agree a{
+    color: black;
+}
+
+.sub{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sub button{
+    height: 3vh;
+    width: 10vw;
+    background: lightcyan;
+    border: 1px solid cornflowerblue;
+    border-radius: 7px;
+}
+
+.sub button:hover{
+    background: cornflowerblue;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Форма регистрации</title>
+    <script>
+        function agreeForm(f) {
+            if (f.agree.checked) f.submit.disabled = 0;
+            else f.submit.disabled = 1;
+        }
+        function show_hide_password(target){
+            var input = document.getElementById('usedabun-kasdenum');
+            if (input.getAttribute('type') == 'password') {
+                target.classList.add('view');
+                input.setAttribute('type', 'text');
+            } else {
+                target.classList.remove('view');
+                input.setAttribute('type', 'password');
+            }
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <div class="all">
+        <div class="title">
+            <h1>Регистрация в нашей системе</h1>
+            <p>Все данные строго конфиденциальны</p>
+        </div>
+        <div class="form">
+            <form>
+                <div class="item">
+                    <label for="email">Email*</label>
+                    <input type="email" name="email" id="email" class="input" placeholder="email@mail.com" required>
+                </div>
+                <div class="item">
+                    <label for="pass">Пароль*</label>
+                    <input type="password" id="usedabun-kasdenum" name="pass" id="pass" class="input" placeholder="Введите пароль" required>
+                    <a href="#" class="podsanu-gesamilod" onclick="return show_hide_password(this);"></a>
+                </div>
+                <div class="item">
+                    <label for="pass2">Повторите пароль*</label>
+                    <input type="password" name="pass2" id="pass2" class="input" placeholder="Повторите пароль" required>
+                    <a href="#" class="podsanu-gesamilod" onclick="return show_hide_password(this);"></a>
+                </div>
+                <div class="item">
+                    <label for="name">Имя*</label>
+                    <input type="text" name="name" id="name" class="input" placeholder="Введите имя" required>
+                </div>
+                <div class="item">
+                    <label for="lastname">Фамилия*</label>
+                    <input type="text" name="lastname" id="lastname" class="input" placeholder="Введите фамилию" required>
+                </div>
+                <div class="item">
+                    <label for="tel">Телефон*</label>
+                    <input type="tel" name="tel" id="tel" class="input" pattern="\+?[0-9\s\-\(\)]+" placeholder="+7(999)-999-99-99" required>
+                </div>
+                <div class="agree">
+                    <p><input type="checkbox" name="agree" onclick="agreeForm(this.form)">
+                        Я согласен со всеми условиями и ознакомлен с <a href="">политикой конфиденциальности</a></p>
+                </div>
+                <div class="sub">
+                    <button type="submit" name="submit" disabled>Зарегестрироваться</button>
+                    <button type="">Отмена</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
